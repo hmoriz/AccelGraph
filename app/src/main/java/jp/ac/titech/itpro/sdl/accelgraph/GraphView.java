@@ -20,6 +20,8 @@ public class GraphView extends View {
     private int x0, y0, ewidth;
     private int dw = 5, dh = 1;
 
+    private int graph_color = Color.YELLOW;
+
     private final Paint paint = new Paint();
 
     public GraphView(Context context) {
@@ -71,7 +73,7 @@ public class GraphView extends View {
         canvas.drawLine(0, y0, ewidth, y0, paint);
 
         // graph
-        paint.setColor(Color.YELLOW);
+        paint.setColor(graph_color);
         paint.setStrokeWidth(2);
         for (int i = 0; i < ndata - 1; i++) {
             int j = (idx + i) % ndata;
@@ -83,8 +85,12 @@ public class GraphView extends View {
         }
     }
 
-    public void addData(float val, boolean invalidate) {
-        vs[idx] = val;
+    public void changeGraphColor(int color){
+        graph_color = color;
+    }
+
+    public void addData(float val1, boolean invalidate) {
+        vs[idx] = val1;
         idx = (idx + 1) % ndata;
         if (invalidate)
             invalidate();

@@ -51,6 +51,17 @@
             android:text="@string/initial_value_text"
             android:textSize="@dimen/small_text_size" />
 
+        <TextView
+            android:id="@+id/mode_view"
+            android:layout_width="@dimen/data_view_width"
+            android:layout_height="wrap_content"
+            android:text="@string/mode_normal"
+            android:textSize="@dimen/small_text_size" />
+        <Button android:id="@+id/button"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Change Mode" />
+
     </LinearLayout>
 
     <TextView

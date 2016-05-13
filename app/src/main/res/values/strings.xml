@@ -9,4 +9,7 @@
     <string name="x_label">X-axis</string>
     <string name="y_label">Y-axis</string>
     <string name="z_label">Z-axis</string>
+    <string name="mode_normal">Normal</string>
+    <string name="mode_average">Average</string>
+    <string name="mode_gravity">Gravity</string>
 </resources>
